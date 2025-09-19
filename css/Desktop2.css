@@ -157,12 +157,14 @@ section{
     position: relative;
     span{
     position: absolute;
-    left: 90px;
-    bottom: 150px;
+    left: 80px;
+    bottom: 130px;
     font-size: 24px;
     color: #fff;
 }
-
+.section_1{
+    
+}
 }
  
 button{
@@ -180,10 +182,32 @@ button{
 section p{
     width: 100%;
     margin-top: 40px;
-    margin-left: 30px;
+    /* margin-left: 1px; */
     font-size: 24px;
     text-align: center;
 }
 .section_2{
     position: relative;
 }
+.section_2::after {
+  content: "";
+  position: absolute; /* box1-in altına yerləşdir */
+  bottom: -180px;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 420px;
+  height: 420px;
+  background: url('../img/purplebubblepng.png') no-repeat center/contain;
+  z-index: 1; /* lazım gələrsə digər elementlərin üstündə görünsün */
+}
+/* .section_2::after {
+  content: "";
+  position: absolute; /* box1-in altına yerləşdir */
+  /* bottom: -180px;
+  left: 30%;
+  transform: translateX(-50%);
+  width: 420px;
+  height: 420px;
+  background: url('../img/purplebubblepng.png') no-repeat center/contain;
+  z-index: 1; /* lazım gələrsə digər elementlərin üstündə görünsün */
+} */ */
