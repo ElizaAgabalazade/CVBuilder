@@ -29,7 +29,24 @@ header {
     margin-top: 10px;
     margin-left: 12px;
 }
+.box1 {
+  position: relative; /* ::after üçün */
+  margin-bottom: 20px;
+  text-align: center; /* şəkilləri ortalamaq üçün */
+}
+.box1::after{
+    content: "";
+    display: block;
+     position: absolute;
+      bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 120px;
+  background: url('../img/Ellipse\ 14.png') no-repeat center/contain;
+  z-index: 1; /* lazım gələrsə digər elementlərin üstündə görünsün */
 
+}
 .logo {
     width: 30%;
     /* background-color: red; */
@@ -54,7 +71,7 @@ header {
     /* fiqurun ölçüsü */
     height: 150px;
     background: url("../img/bubbleO.png") no-repeat center/contain;
-    z-index: 1;
+    z-index: 0;
     /* nav item-lərin altında qalır */
 }
 
@@ -132,5 +149,21 @@ section{
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
+    margin-top: 150px;
     
+}
+.section_1, .section_2, .section_3{
+    width: 25%;
+}
+section a{
+    padding: 30px;
+    min-width: 100%;
+    border-radius: 30px;
+    font-size: 29px;
+    background: linear-gradient(to right, #73AFF3, #FCBDFF);
+}
+section p{
+    width: 40%;
+    margin-top: 40px;
+    font-size: 24px;
 }
